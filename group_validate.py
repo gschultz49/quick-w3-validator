@@ -1,9 +1,9 @@
-''' Import base modules '''
+''' Import base modules, colors, and Scraper '''
 import os
 import sys
 import time
-from local_scrape import LocalScraper
 from colors import bcolors
+from local_scrape import LocalValidator
 
 '''
     Designed for use on the aggregation of CMS files output, not individual directories
@@ -15,12 +15,11 @@ def group_validate(root_path, milestone):
             CMSdir = os.path.join(root_path, dirname)
             studentWorkDir = os.path.join(CMSdir, milestone + "-" + dirname)
             try:  
-                LocalScraper(studentWorkDir)
+                LocalValidator(studentWorkDir)
             except:
                 print (bcolors.WARNING + "Directory empty or misformatted :( " + bcolors.ENDC)
 
 
 if __name__ == '__main__':
     if len (sys.argv) >= 2:
-        group_validate(sys.argv[1], "p2m2")  # python local_scrape.py /path/to/CMS/students/directories
-        # ex: python group_scrape.py /Users/gschultz49/Desktop/CornellDrive/Junior\ Year/INFO1300TA/p2m2
+        group_validate(sys.argv[1], sys.argv[2]) 

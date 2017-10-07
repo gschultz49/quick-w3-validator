@@ -10,7 +10,8 @@ from colors import bcolors
     Designed for use on individual directories to evaluate the .html files on the root directory. 
     WARNING there is no caching, so you could get 403'd quickly if you run this validator repeatedly, use sparingly. 
 '''
-class LocalScraper():
+
+class LocalValidator():
     def __init__(self, root_path, displayOutput=False):
         self.show_output = displayOutput
         self.error_descriptions = []
@@ -64,4 +65,4 @@ class LocalScraper():
         
 if __name__ == '__main__':
     if len (sys.argv) >= 2:
-        LocalScraper(sys.argv[1], True)  # python local_scrape.py /path/to/students/work
+        LocalValidator(sys.argv[1])  # python local_scrape.py /path/to/students/work
