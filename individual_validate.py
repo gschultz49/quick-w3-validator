@@ -5,8 +5,8 @@ import json
 import time
 import platform
 import zipfile
-import requests
 import shutil
+import requests
 from colors import bcolors
 
 '''
@@ -50,6 +50,7 @@ class Individual_Validate():
         # IF THEY DON'T ZIP THEIR FOLDER CORRECTLY
         incorrectly_Zipped_folder = 0
         for singleDirectory in os.listdir(root_path):
+            # assuming a zip file, an unzipped folder, and a rationale until something is wrong
             if incorrectly_Zipped_folder > 3:
                 print (bcolors.FAIL + "THIS FOLDER IS NOT ZIPPED CORRECTLY, MANUALLY CHECK" + bcolors.ENDC)
             if '.' not in singleDirectory:
