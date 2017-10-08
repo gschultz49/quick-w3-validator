@@ -9,6 +9,7 @@ from individual_validate import Individual_Validate
 '''
 
 def group_directory_validate(root_path):
+    studentsWithErrors = []
     for dirname in os.listdir(root_path):
         isEmpty = False
         if not dirname.startswith('.'):
@@ -28,7 +29,16 @@ def group_directory_validate(root_path):
             if not os.path.isfile(CMSdir):
                 if isEmpty == False:
                     studentWork = os.path.join(CMSdir)
-                    Individual_Validate(studentWork)
+                    student = Individual_Validate(studentWork)
+                    # keep track of who gets an error
+                    for student_err in student.err_files:
+                        studentsWithErrors.append((student_err, student.err_files[student_err]))
+    
+    # print out students with errors
+    for student in studentsWithErrors:
+        print (bcolors.WARNING + "\nStudents with errors:"+ bcolors.ENDC)
+        print ("{} file: {}".format(student[0], student[1]))
+                    
                        
 if __name__ == '__main__':
     if len (sys.argv) >= 2:
