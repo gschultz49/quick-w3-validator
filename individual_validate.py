@@ -26,7 +26,9 @@ class Individual_Validate():
             self.unzip(root_path)
         self.validate(self.root)
 
-    '''Unzips the single .zip files in a student's directory '''
+    '''
+        Unzips the single .zip files in a student's directory
+     '''
     def unzip(self, root_path):
         print (bcolors.OKGREEN + "\nUnzipping Website in: {}".format(self.root) + bcolors.ENDC)
         for file in os.listdir(root_path):
@@ -50,12 +52,10 @@ class Individual_Validate():
         for singleDirectory in os.listdir(root_path):
             if incorrectly_Zipped_folder > 3:
                 print (bcolors.FAIL + "THIS FOLDER IS NOT ZIPPED CORRECTLY, MANUALLY CHECK" + bcolors.ENDC)
-            print (singleDirectory)
             if '.' not in singleDirectory:
                 newRelativeLocation = os.path.join(root_path, singleDirectory)
                 self.root = os.path.join(root_path, newRelativeLocation)
                 print ("Update root dir: {}".format(self.root))
-            
             incorrectly_Zipped_folder +=1
                 
 
