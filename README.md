@@ -43,7 +43,7 @@
 <p>
     We DO NOT want to overload w3's validation servers, frequent use of these scripts in a short period of time (generally 150 requests in 2 hours) can lead to a 403 or request forbidden error. Use this tool sparingly and at your own risk.
     <br><br>
-    In some instances, student's do not zip a single folder, but an array of files. This will cause an error in the validator which requires <b>manual adjustments</b>. This occurs in the <b>group_directory_validate.py</b>
+    In some instances, student's do not zip a single folder, but an array of files. This will cause an error in the validator which requires <b>manual adjustments</b>. This occurs in the <b>group_directory_validate.py</b>
 
 </p>
 
