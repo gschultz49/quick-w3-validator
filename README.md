@@ -25,20 +25,29 @@
         
 </pre>
 <p>
-    You need to run 
+    To run the validator on an individual directory:
     <br>
-    `python local_validate.py /absolute/path/to/students/dir`
+    `python indivdual_validate.py /absolute/path/to/students/dir`
     <br>
-    You can choose to show the JSON output per file by passing a 'True' to the LocalValidator class instantiation.  
+    You can choose to show the JSON output per file by passing a 'True' to the displayOutput in the Individual_Validate instantiation 
+</p>
+<p>
+    To run the validator on all the directories outputted from CMS, run
+    `python group_directory_validate.py /absolute/path/to/CMS/dir`
+    <br>
+    By default, this unzips the directory, then validates it.
 
 </p>
 
 # Warnings
 <p>
     We DO NOT want to overload w3's validation servers, frequent use of these scripts in a short period of time (generally 150 requests in 2 hours) can lead to a 403 or request forbidden error. Use this tool sparingly and at your own risk.
+    <br>
+    In some instances, student's do not zip a single folder, but an array of files. This will cause an error in the validator which requires manual adjustments. This occurs on the group validation function 
+
 </p>
 
 # Other
 <p>
-    This script works on both macOS and windows 10, however, colorful terminal output only works on macOS
+    This script works on both macOS and windows 10, however, colorful terminal output only works on macOS and Linux.
 </p>

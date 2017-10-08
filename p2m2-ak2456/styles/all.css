@@ -1,0 +1,258 @@
+html {
+    background-color: lightgrey; 
+    font-family: sans-serif;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 200px;
+
+}
+
+#menu ul{ 
+    width:245px;  
+    float: left;
+    display:block; 
+    background-color:grey; 
+    height:auto;
+    margin:0px; 
+}
+
+#menu ul li {
+    background-color:lightgrey;
+    padding:5px; 
+    margin: 5px;
+    list-style:none; 
+    width:180px; 
+    float:left; 
+    text-align: center;
+}
+
+#menu ul li:hover {
+    background-color: #000111;
+}
+
+#menu ul li a { 
+    color:white; 
+    text-decoration:none;
+}
+
+#banner img{
+    width:1000px; 
+}
+
+.intro{ 
+    width: 710px;
+    height: auto;
+    background-color:#EFF0F0;
+    float:right; 
+}
+
+.intro p{ 
+    font-size:12px;
+    margin-left:10px; 
+    padding-top:10px; 
+    width:500px;
+    float:left; 
+    margin-top:0px; 
+}
+
+.intro h2{ 
+    padding-left:10px; 
+}
+
+.intro .source{
+    font-size:9px; 
+    width:150px; 
+    float:right;
+}
+
+.intro #date img{ 
+    width:200px;
+    float:right; 
+}
+
+#map { 
+    width:690px;
+    margin-top:10px; 
+}
+
+h2, h3 {    
+    padding-left:10px; 
+}
+
+.previousContainer{
+    width:320px;
+    float:left; 
+    text-align: center;
+    margin-left:10px;
+}
+
+.photoContainer{
+    overflow: hidden;
+    width: 710px;
+    background-color:white;
+    float:right; 
+    margin-left:10px;  
+}
+
+.previousContainer .previous{
+    background-color: transparent;  
+    width: 300px;
+}    
+
+.stext{ 
+    font-size:9px; 
+    float:left; 
+    margin-left:10px; 
+}
+
+#date{ 
+    height:200px;  
+}
+
+#footer img{ 
+    width:1000px; 
+}
+
+
+.list { 
+    width:210px; 
+    padding-left:10px; 
+    float:left; 
+}
+
+.participants {
+    font-size:12px;
+    text-decoration:underline; 
+}
+
+.participants:hover{ 
+    color:green; 
+}
+
+.partext{
+    font-size:10px; 
+}
+
+.intro h4{ 
+    padding-left:10px; 
+}
+
+section ul { 
+    width:500px; 
+    font-size:12px; 
+}
+
+.darklinks{ 
+    color:black; 
+    text-decoration:none; 
+    font-weight:bold;
+}
+
+.darklinks:hover{ 
+    color:green;  
+}
+
+.appl { 
+    width:500px; 
+    float:left; 
+    color:black; 
+    text-decoration:none; 
+    font-weight:bold;
+    margin-bottom:10px; 
+}
+
+.appl:hover{ 
+    color:green; 
+}
+
+.stext2{ 
+    font-size:9px; 
+    float:left; 
+    margin-bottom:5px; 
+}
+
+#buslogo { 
+    width:400px; 
+}
+
+.clear{ 
+    clear:both; 
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 360px) {
+
+    body {
+        width: 360px;
+    }
+
+    #banner img{ 
+        width:360px;
+        float:none; 
+    }
+
+    #menu ul {
+        width:360px; 
+    }
+
+    #menu ul li{ 
+        width:150px; 
+        margin-left:60px; 
+        font-size:12px; 
+        height:10px;  
+    }
+
+    .intro{ 
+        width:360px; 
+    }
+
+    .intro h2{ 
+        width:360px; 
+    }
+
+    .intro p{ 
+        width:340px;  
+    }
+
+    #date img { 
+        margin-right:80px; 
+    }
+
+    .photoContainer{ 
+        width:360px; 
+    }
+
+    #map { 
+        width:360px; 
+        float:none; 
+    }
+
+    .previousContainer{ 
+        width:360px; 
+        float:none; 
+        margin-left:0px; 
+    }
+
+    #buslogo { 
+        width:340px; 
+    }
+
+    .stext2{ 
+        margin-left:10px; 
+    }
+
+    #footer img { 
+        width:360px; 
+    }
+
+
+}
+
+
