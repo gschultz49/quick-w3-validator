@@ -1,4 +1,4 @@
-<h1>This tool is designed to quickly validate many student's directories for CS 1300, using the w3 validation API</h1>
+<h1>This tool is designed to quickly validate many student's directories for CS 1300, using the w3 validation service</h1>
 
 # Installation
 <p>

@@ -1,4 +1,4 @@
-''' Import base modules, colors, and Scraper '''
+''' Import base modules, colors, and Validator '''
 import os
 import sys
 from colors import bcolors

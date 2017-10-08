@@ -100,6 +100,5 @@ class Individual_Validate():
         
 if __name__ == '__main__':
     if len (sys.argv) >= 2:
-        # If you run this file individually, you will see the output
         Individual_Validate(sys.argv[1], displayOutput=False)  
         
