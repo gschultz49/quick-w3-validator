@@ -8,6 +8,17 @@
 </p>
 
 # Usage  
+
+
+<p>
+    execution should be in this form:
+    <pre> python main.py abs_path_to_CMS_downloads abs_path_to_grading_template grading_file_name </pre>
+</p>
+
+
+
+
+
 <p>
     This project can be ran in 2 ways. 
     <br><br>
