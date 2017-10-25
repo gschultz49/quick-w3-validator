@@ -15,7 +15,7 @@
     <pre> python main.py abs/path/to/CMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
 </p>
 <p> indiviudual folder validation can be used in the form
-    <pre> python main.py abs/path/to/individual/folder </pre>
+    <pre> python individual_validate.py abs/path/to/individual/folder </pre>
 </p>
 
 
