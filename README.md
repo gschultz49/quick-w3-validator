@@ -14,8 +14,9 @@
     execution should be in this form:
     <pre> python main.py abs/path/to/CMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
 </p>
-<p> indiviudual folder validation can be used in the form
+<p> indiviudual folder validation can be used in the form. Note, this assumes there is a zipped folder at the abs/path/to/individual/folder and will automatically unzip it. To avoid this behavior, change the unzip default parameter in the class initalizer to False such that <pre> def __init__(self, root_path, display_output=False, unzip=True): --> def __init__(self, root_path, display_output=False, unzip=False): </pre>
     <pre> python individual_validate.py abs/path/to/individual/folder </pre>
+    
 </p>
 
 
