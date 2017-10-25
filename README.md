@@ -12,7 +12,7 @@
 
 <p>
     execution should be in this form:
-    <pre> python main.py abs/path/to/CMS/downloads  abs/path/to/grading/template  grading_file/_name.ext </pre>
+    <pre> python main.py abs/path/to/CMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
 </p>
 <p> indiviudual folder validation can be used in the form
     <pre> python main.py abs/path/to/individual/folder </pre>
