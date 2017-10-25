@@ -7,13 +7,20 @@
     (This project is written in Python 3.5.2)
 </p>
 
-# Usage  
+# Usage for TA's
 
 
 <p>
-    execution should be in this form:
-    <pre> python main.py abs/path/to/CMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
+    Execution should be in this form:
+    <pre> python main.py abs/path/to/GroupedCMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
+    This execution will <br>
+    1. Unzip all the student's directories from CMS <br>
+    2. Validate all HTML and PHP files (given these files are in the root unzipped directory)<br>
+    3. Generate a single grading file wiht the student's netID's and corresponding grading template in a single file of your name choice within the Grouped CMS download folder
 </p>
+
+# Usage for Students
+
 <p> Indiviudual folders can also be validated
      <pre> python individual_validate.py abs/path/to/individual/folder </pre>
     Note, this assumes there is a zipped folder at the abs/path/to/individual/folder and will automatically unzip it. To avoid this behavior, change the unzip default parameter in the __main__ to *False* such that <pre> Individual_Validate(sys.argv[1])  --> Individual_Validate(sys.argv[1], unzip=False) </pre>
