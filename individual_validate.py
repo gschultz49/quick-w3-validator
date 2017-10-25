@@ -27,7 +27,7 @@ from colors import bcolors
 '''
 
 class Individual_Validate():
-    def __init__(self, root_path, display_output=False, unzip=True):
+    def __init__(self, root_path, display_output=False, unzip=False):
         self.show_output = display_output
         self.error_descriptions = []
         self.err_files ={}

@@ -29,7 +29,6 @@
 
 <p> Indiviudual folders can also be validated
      <pre> python individual_validate.py abs/path/to/individual/folder </pre>
-    Note, this assumes there is a zipped folder at the abs/path/to/individual/folder and will automatically unzip it. To avoid this behavior, change the unzip default parameter in the __main__ to *False* such that <pre> Individual_Validate(sys.argv[1])  --> Individual_Validate(sys.argv[1], unzip=False) </pre>
    
 </p>
 

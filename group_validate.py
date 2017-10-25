@@ -29,7 +29,7 @@ def group_directory_validate(root_path):
             if not os.path.isfile(CMSdir):
                 if isEmpty == False:
                     studentWork = os.path.join(CMSdir)
-                    student = Individual_Validate(studentWork)
+                    student = Individual_Validate(studentWork, unzip=True)
                     # keep track of who gets an error
                     for student_err in student.err_files:
                         studentsWithErrors.append((student_err, student.err_files[student_err]))
