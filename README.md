@@ -7,43 +7,30 @@
     (This project is written in Python 3.5.2)
 </p>
 
-# Usage  
-<p>
-    This project can be ran in 2 ways. 
-    <br><br>
-    To validate .html files in a single directory, at the root of the directory such that (to validate one.html, two.html)
-</p>
-<pre>
-        root_dir
-        |
-        |-- one.html
-        |
-        |-- two.html
-        |
-        |-- images (other directories...)
-        |   |--photo1.jpg
-        
-</pre>
-<p>
-    To run the validator on an individual directory:
-    <br>
-    <pre>python indivdual_validate.py /absolute/path/to/students/dir</pre>
-    <br>
-    You can choose to show the JSON output per file by passing a 'True' to the displayOutput in the Individual_Validate instantiation 
-</p>
-<p>
-    To run the validator on all the directories outputted from CMS, run
-    <pre>python group_directory_validate.py /absolute/path/to/CMS/dir</pre>
-    <br>
-    By default, this unzips the directory, then validates it.
+# Usage for TA's
 
+
+<p>
+    Execution should be in this form:
+    <pre> python main.py abs/dir/path/to/GroupedCMS/downloads  abs/file/path/to/grading/template.md  grading_file_name.ext </pre>
+    This execution will <br>
+    1. Unzip all the student's directories from CMS <br>
+    2. Validate all HTML and PHP files (given these files are in the root unzipped directory)<br>
+    3. Generate a single grading file with the student's netID's and corresponding grading template in a single file of your name choice within the Grouped CMS download folder
 </p>
+
+# Usage for Students
+
+<p> Indiviudual folders can also be validated
+     <pre> python individual_validate.py abs/path/to/individual/folder </pre>
+    Note, this assumes there is a zipped folder at the abs/path/to/individual/folder and will automatically unzip it. To avoid this behavior, change the unzip default parameter in the __main__ to *False* such that <pre> Individual_Validate(sys.argv[1])  --> Individual_Validate(sys.argv[1], unzip=False) </pre>
+   
+</p>
+
 
 # Warnings
 <p>
     We DO NOT want to overload w3's validation servers, frequent use of these scripts in a short period of time (generally 150 requests in 2 hours) can lead to a 403 or request forbidden error. Use this tool sparingly and at your own risk.
-    <br><br>
-    In some instances, student's do not zip a single folder, but an array of files. This will cause an error in the validator which requires <b>manual adjustments</b>. This occurs in the <b>group_directory_validate.py</b>
 
 </p>
 
