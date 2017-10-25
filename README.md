@@ -1,6 +1,12 @@
-<h1>This tool is designed to quickly validate many student's directories for CS 1300, using the w3 validation service</h1>
+
+# What does this do?
+
+<h3>
+    This tool is designed to quickly validate .html and .php files, as well as rapidly setup the grading environment for TA's
+</h3>
 
 # Installation
+
 <p>
     You will need to install the Python requests library to use this.
     <pre>pip install requests</pre>
