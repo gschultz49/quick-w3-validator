@@ -7,6 +7,7 @@ import platform
 import zipfile
 import shutil
 import requests
+import subprocess
 from colors import bcolors
 
 '''
@@ -89,26 +90,34 @@ class Individual_Validate():
     '''
     def runValidation(self, path_to_file):
         print ("\n\tExamining file: {}".format(path_to_file))
-        # Read in raw html 
-        data = open(path_to_file , 'rb').read()
+        # Read in raw html
+        if path_to_file[-4:] == ".php":
+            proc = subprocess.Popen("php '{}'".format(path_to_file), shell=True, stdout=subprocess.PIPE)
+            data = proc.stdout.read()   
+        elif path_to_file[-5:] ==".html":
+            data = open(path_to_file , 'rb').read()
         # Send to validator, output comes back as JSON
         output = requests.post('https://validator.w3.org/nu/?out=json', headers=self.headers, data=data).json()
         
+        dir_path = os.path.dirname(os.path.realpath(path_to_file)).split(os.sep)[-1]
         # Print out the error messages if they exist
+        # skip over 'includes' directory    
+        if dir_path =="includes":
+            print ("\t\t" + bcolors.OKBLUE + "Skipping over includes folder" + bcolors.ENDC)
+            return 
+            
         for entry in output["messages"]:
-            # Ignore PHP related errors (needs more testing)
-            if "<?php" not in entry["extract"]:    
-                # If a valid HTML error, print it out
-                if entry["type"] == "error":
-                    self.error_descriptions.append(entry["message"])
+            if entry["type"] == "error":
+                
+                self.error_descriptions.append(entry["message"])
 
-                    if self.netID in self.err_files:
-                        self.err_files[self.netID].add(os.path.basename(path_to_file))
-                    else:
-                        self.err_files[self.netID] = {os.path.basename(path_to_file)}
+                if self.netID in self.err_files:
+                    self.err_files[self.netID].add(os.path.basename(path_to_file))
+                else:
+                    self.err_files[self.netID] = {os.path.basename(path_to_file)}
 
-                    print ("\t\t" + bcolors.FAIL + "ERROR FOUND!" + bcolors.ENDC)
-                    print ("\t\t" + entry["message"])
+                print ("\t\t" + bcolors.FAIL + "ERROR FOUND!" + bcolors.ENDC)
+                print ("\t\t" + entry["message"])
         
         # If you want to see the raw JSON output for each file, pass a 'True' into display_output, 
         # This is NOT enabled by default
@@ -128,5 +137,5 @@ class Individual_Validate():
                 
 if __name__ == '__main__':
     if len (sys.argv) >= 2:
-        Individual_Validate(sys.argv[1], display_output=False)  
+        Individual_Validate(sys.argv[1], unzip=False)  
         
