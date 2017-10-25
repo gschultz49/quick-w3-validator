@@ -29,7 +29,8 @@
 
 <p> Indiviudual folders can also be validated
      <pre> python individual_validate.py abs/path/to/individual/folder </pre>
-   
+    This execution will <br>
+    1. Validate all HTML and PHP files in the given directory and display any errors in the terminal<br>
 </p>
 
 
