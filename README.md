@@ -12,7 +12,7 @@
 
 <p>
     Execution should be in this form:
-    <pre> python main.py abs/path/to/GroupedCMS/downloads  abs/path/to/grading/template  grading_file_name.ext </pre>
+    <pre> python main.py abs/dir/path/to/GroupedCMS/downloads  abs/file/path/to/grading/template.md  grading_file_name.ext </pre>
     This execution will <br>
     1. Unzip all the student's directories from CMS <br>
     2. Validate all HTML and PHP files (given these files are in the root unzipped directory)<br>
