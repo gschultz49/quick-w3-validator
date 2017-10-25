@@ -16,7 +16,7 @@
     This execution will <br>
     1. Unzip all the student's directories from CMS <br>
     2. Validate all HTML and PHP files (given these files are in the root unzipped directory)<br>
-    3. Generate a single grading file wiht the student's netID's and corresponding grading template in a single file of your name choice within the Grouped CMS download folder
+    3. Generate a single grading file with the student's netID's and corresponding grading template in a single file of your name choice within the Grouped CMS download folder
 </p>
 
 # Usage for Students
